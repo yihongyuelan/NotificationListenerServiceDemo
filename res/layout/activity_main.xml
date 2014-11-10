@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/btnCreateNotify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:onClick="buttonOnClicked"
+        android:text="Create Notification" />
+
+    <LinearLayout
+        android:id="@+id/clearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnCreateNotify"
+        android:layout_alignRight="@+id/btnCreateNotify"
+        android:layout_below="@+id/btnCreateNotify"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnClearLastNotify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="buttonOnClicked"
+            android:text="Cancel Last Nos" />
+
+        <Button
+            android:id="@+id/btnClearAllNotify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="buttonOnClicked"
+            android:text="Cancel All Nos" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnListNotify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/clearLayout"
+        android:layout_alignRight="@+id/clearLayout"
+        android:layout_below="@+id/clearLayout"
+        android:onClick="buttonOnClicked"
+        android:text="List of Notification" />
+
+    <Button
+        android:id="@+id/btnEnableUnEnableNotify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnListNotify"
+        android:layout_alignRight="@+id/btnListNotify"
+        android:layout_below="@+id/btnListNotify"
+        android:onClick="buttonOnClicked"
+        android:text="Enable/UnEnable Listener" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@+id/btnEnableUnEnableNotify"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/btnEnableUnEnableNotify"
+        android:layout_below="@+id/btnEnableUnEnableNotify" >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </ScrollView>
+
+</RelativeLayout>
